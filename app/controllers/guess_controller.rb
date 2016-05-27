@@ -1,6 +1,7 @@
 post '/guess' do
 
   @card = Card.find_by(id: params[:card_id])
+  
   @next_card = Card.find_by(id: @card.move_to_next_card)
   @round = Round.find_by(id: params[:id])
 

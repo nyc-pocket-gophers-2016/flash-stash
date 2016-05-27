@@ -1,12 +1,11 @@
-<h1><%= @card.deck.title %></h1>
+<h1><%= @card.deck.category %></h1>
 
 <h3><%= @card.question %></h3>
 
 <h2>Enter your guess:</h2>
 <form action='/guess' method='POST'>
-  <div class="form">
   <input type="hidden" name="card_id" value="<%= @card.id %>">
   <input type='text' name='response' placeholder='your answer'>
-  <input class="form-button" type='submit' value='submit your guess'>
-  </div>
+  <input type='submit' value='submit your guess'>
 </form>
+
