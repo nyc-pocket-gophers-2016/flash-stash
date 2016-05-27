@@ -1,4 +1,4 @@
-get '/decks' do
+get '/' do
 	@decks = Deck.all
 	erb	:"/decks/deck_index"
 end

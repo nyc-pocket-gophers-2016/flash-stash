@@ -9,3 +9,7 @@ post '/rounds' do
 	@card = @card_deck[0]
 	erb :"cards/show"
 end
+
+get '/rounds/:id' do
+	
+end
