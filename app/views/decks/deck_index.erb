@@ -1,3 +1,14 @@
+<h1>Flash Stash Flash Cards!</h1>
+
+
 <% @decks.each do |each_deck| %>
-<a href='/decks/<%each_deck.id%>'><%= each_deck.category %></a>
+	
+	<ul>
+		<li><form method="post" action="/rounds">
+		<input type="hidden" name="deck_id" value="<%= each_deck.id %>" >
+		<p><%=each_deck.category%><p>
+		<input type="submit" value="start a round">
+		</li>
+	</ul>
+
 <% end %>
