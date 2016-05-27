@@ -1,8 +1,6 @@
 Card.delete_all
 Deck.delete_all
 User.delete_all
-  
-end
 
 card_content = [
   {question: 'What type of currency did Croatia use before switching to the Euro?', answer: 'Kuna', deck_id: 1},
@@ -28,11 +26,11 @@ Card.create!(card_content2)
 
 users = [
   {email: "susan@susan.com", password: "00000"},
-  {email: "ena@ena.com", password: "00000"}
-  {email: "david@david.com", password: "00000"}
-  {email: "homer@homer.com", password: "00000"}
-  {email: "marge@marge.com", password: "00000"}
+  {email: "ena@ena.com", password: "00000"},
+  {email: "david@david.com", password: "00000"},
+  {email: "homer@homer.com", password: "00000"},
+  {email: "marge@marge.com", password: "00000"},
   {email: "lisa@lisa.com", password: "00000"}
 ]
 
-Users.create!(users)
+User.create!(users)
