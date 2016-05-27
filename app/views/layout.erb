@@ -7,7 +7,7 @@
     See: http://necolas.github.com/normalize.css/
   -->
   <link rel="stylesheet" href="/css/normalize.css">
-  <!--
+<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>  <!--
     application.css is where you put your styles
   -->
   <link rel="stylesheet" href="/css/application.css">
@@ -18,6 +18,16 @@
   <title></title>
 </head>
 <body>
+  <h1 class="flash">- - - Flash - Stash - - -</h1>
+  <ul>
+    <li class="main-links"><a href="/">home</a></li>
+    <% if logged_in? %>
+    <li class="main-links"><a href="/logout">log out</a></li>
+    <% else %>
+    <li class="main-links"><a href="/users/new">sign up</a></li>
+    <li class="main-links"><a href="/login">log in</a></li>
+    <% end %>
+  </ul>
   <%= yield %>
 </body>
 </html>

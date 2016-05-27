@@ -1,0 +1,12 @@
+<div class="body"><h3>Log in:</h3>
+
+<div id="error"><% if @error %>
+  <p><%= @error %></p>
+<%end%></div>
+
+<form action="/login" method="post">
+  <input type="email" name="email" placeholder="Email">
+  <input type="password" name="password" placeholder="Password">
+  <input type="submit" value="Submit">
+</form>
+</div>
