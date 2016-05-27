@@ -1,5 +1,5 @@
 post '/rounds' do
-
+# binding.pry
 	if logged_in?
 		@round = Round.create(user_id: current_user.id, deck_id: params[:deck_id])
 	else

@@ -1,15 +1,15 @@
 <div class='body'>
 
+<ul>
 <% @decks.each do |each_deck| %>
-	
-	<ul>
 		<li><form method="post" action="/rounds">
 		<input type="hidden" name="deck_id" value="<%= each_deck.id %>" >
 		<p><%=each_deck.category%><p>
 		<input type="submit" value="start a round">
+		</form>
 		</li>
-	</ul>
 
 <% end %>
+	</ul>
 
 </div>
