@@ -1,1 +1,4 @@
-user_controller.rb
+get 'login' do
+  erb :'users/index'
+end
+
