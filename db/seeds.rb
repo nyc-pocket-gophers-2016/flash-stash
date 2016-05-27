@@ -1,0 +1,38 @@
+Card.delete_all
+Deck.delete_all
+User.delete_all
+  
+end
+
+card_content = [
+  {question: 'What type of currency did Croatia use before switching to the Euro?', answer: 'Kuna', deck_id: 1},
+  {question: 'Which country has the highest denomination of currency?', answer: 'Zimbabwe', deck_id: 1},
+  {question: 'Which country has the highest value banknote?', answer: 'Switzerland', deck_id: 1},
+  {question: 'How many countries call their currency "dollar"?', answer: '37', deck_id: 1},
+  {question: 'What type of currency do they use in Madagascar?', answer: 'Ariary', deck_id: 1},
+]
+
+Deck.create!(category: 'World Currency')
+Card.create!(card_content)
+
+card_content2 = [
+  {question: 'What is the Latin origin of the word "Ruby"?', answer: 'Rubens', deck_id: 2},
+  {question: 'What mineral gives rubies their red color?', answer: 'Chromium', deck_id: 2},
+  {question: 'How many million was the most expensive ruby ever sold?', answer: '7', deck_id: 2},
+  {question: 'Which country discovered the ruby?', answer: 'India', deck_id: 2},
+  {question: 'In what year was Ruby discovered?', answer: '1993', deck_id: 2}
+]
+
+Deck.create!(category: 'Ruby Facts')
+Card.create!(card_content2)
+
+users = [
+  {email: "susan@susan.com", password: "00000"},
+  {email: "ena@ena.com", password: "00000"}
+  {email: "david@david.com", password: "00000"}
+  {email: "homer@homer.com", password: "00000"}
+  {email: "marge@marge.com", password: "00000"}
+  {email: "lisa@lisa.com", password: "00000"}
+]
+
+Users.create!(users)
