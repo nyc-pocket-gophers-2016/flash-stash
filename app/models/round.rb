@@ -12,3 +12,4 @@ class Round < ActiveRecord::Base
   	self.guesses.where(is_correct?: 'true').collect { |guess| guess.card}
   end
 end
+
