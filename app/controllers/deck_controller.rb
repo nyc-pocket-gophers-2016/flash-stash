@@ -1,6 +1,6 @@
-get '/decks' do
+get '/' do
 	@decks = Deck.all
-	erb	:"/decks/deck_index"
+	erb	:"/decks/index"
 end
 
 get '/decks/:id' do
