@@ -1,12 +1,14 @@
-<div class="body"><h2>Hello, <%= @user.email %>!</h2>
+<div class="banner"><h2>Hello, <%= @user.email %>!</h2>
 
 <h3>Scores:</h3>
 <% @rounds.each do |round| %>
+  <div id="scores">
   <h4>Quiz Name: <%= round.deck.category %></h4>
   <p>Date: <%= round.created_at %></p>
   <p>Cards in deck: <%= round.deck.cards.length %></p>
   <p>First Guess Correct: <%=round.first_guess %> </p>
   <p>Total Guesses: <%=round.guesses.length %> </p>
+  </div>
   <br>
 <% end %>
 

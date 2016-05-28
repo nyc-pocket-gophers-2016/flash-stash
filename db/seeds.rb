@@ -18,13 +18,13 @@ card_content2 = [
   {question: 'In what year was Ruby discovered?', answer: '1993', deck_id: 2}
 ]
 
-# card_content3 = [
-#   {question: 'What country was Bruce Willis in?', answer: 'Germany', deck_id: 3},
-#   {question: "What is Jean-Claude Van Damme's nickname?", answer: 'muscles from brussles', deck_id: 3},
-#   {question: '', answer: '', deck_id: 3},
-#   {question: '', answer: '', deck_id: 3},
-#   {question: '', answer: '', deck_id: 3}
-# ]
+card_content3 = [
+  {question: 'What country was Bruce Willis born in?', answer: 'Germany', deck_id: 3},
+  {question: "What is Jean-Claude Van Damme's nickname?", answer: 'muscles from brussles', deck_id: 3},
+  {question: 'Which 90s action star is also a professionally trained opera singer?', answer: 'Jackie Chan', deck_id: 3},
+  {question: 'Which 90s action star had parents who joined the Nazi party?', answer: 'Arnold Schwarzenegger', deck_id: 3},
+  {question: 'What is the number on the roof of the bus in Speed?', answer: '2525', deck_id: 3}
+]
 
 users = [
   {email: "susan@susan.com", password: "00000"},
@@ -36,7 +36,7 @@ users = [
 ]
 Card.create!(card_content)
 Card.create!(card_content2)
-# Card.create!(card_content3)
+Card.create!(card_content3)
 Deck.create!(category: 'World Currency')
 Deck.create!(category: 'Ruby Facts')
 User.create!(users)

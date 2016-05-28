@@ -1,12 +1,14 @@
-<h1><%= @card.deck.category %></h1>
+<div class="question">
+<h2><%= @card.deck.category %></h2>
 
-<h3><%= @card.question %></h3>
 
-<h2>Enter your guess:</h2>
+<h4><%= @card.question %></h4>
+
+<h3>Enter your guess:</h3>
 <form action='/guess' method='POST'>
   <input type="hidden" name="card_id" value="<%= @card.id %>">
   <input type='hidden' name="round_id" value="<%= @round.id %>">
   <input type='text' name='response' placeholder='your answer'>
   <input type='submit' value='submit your guess'>
 </form>
-
+</div>
