@@ -11,5 +11,16 @@ post '/rounds' do
 end
 
 get '/rounds/:id' do
-	
+    @round = Round.find_by(id: params[:id])
+  if @round
+    @round_category = @round.deck.category
+    @total_guesses = @round.guesses.length
+    @total_questions = @round.deck.cards.length
+    @first_try = @round.first_guess
+    erb :'/rounds/show'
+  else
+    redirect '/'
+  end
 end
+
+

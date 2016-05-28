@@ -1,14 +1,23 @@
+* {
+  padding-right: 50px;
+}
+
 .flash {
   text-align: center;
   font-family: 'Montserrat', sans-serif;
   font-size: 3em;
 }
 
+.flash ul {
+  background-color: blue
+
+}
+
 .main-links {
   list-style-type: none;
   float: right;
   text-align: center;
-  padding-left: 50px;
+  padding-left: -10px;
   margin-left: 20px
 /*  margin-right: 30px;*/
 }
@@ -17,13 +26,26 @@
   text-decoration: none;
   color: black;
   font-size: 1.1em;
+  /*padding-left: 1em;*/
+  padding-right: 1em;
+  border-right: 1px solid;
 }
 
 .main-links a:hover {
   color: red;
 }
 
-.body {
+.banner {
   margin-top: 100px;
   margin-left: 200px;
+}
+
+#scores{
+  border: solid black;
+  padding-left: 30px;
+}
+
+.question {
+  padding-top: 5%;
+  padding-left: 15%;
 }

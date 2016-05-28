@@ -1,0 +1,8 @@
+<h1> <%= @round_category  %> </h1>
+
+<p>You've completed a round of <%= @round.deck.category %>. You answered <%= @first_try %> / <%= @total_questions %> cards correctly on the first try. You submitted <%= @total_guesses %> guesses before each card was answered correctly.</p>
+
+<% if !logged_in? %>
+  <% @round.guesses.delete_all %>
+  <% @round.destroy %>
+<% end %>
