@@ -1,21 +1,8 @@
-<h1> <%= @round.deck.category %> </h1>
+<h1> <%= @round_category  %> </h1>
 
-<% @total_guesses = @round.guesses.length %>
-<% @total_questions = @round.deck.cards.length %>
+<p>You've completed a round of <%= @round.deck.category %>. You answered <%= @first_try %> / <%= @total_questions %> cards correctly on the first try. You submitted <%= @total_guesses %> guesses before each card was answered correctly.</p>
 
-<% @false_array = @round.guesses.select { |guess| guess.is_correct? == "false" } %>
-
-<% unique_guesses = @round.guesses %>
-
-<% @round.guesses.each do |guess| %>
-  <% @false_array.each do |false_guess| %>
-    <% if guess.card_id == false_guess.card_id %>
-      <% unique_guesses -= [guess] %>
-    <% end %>
-  <% end %>
+<% if !logged_in? %>
+  <% @round.guesses.delete_all %>
+  <% @round.destroy %>
 <% end %>
-
-<% first_try = unique_guesses.length %>
-
-
-<p>You've completed a round of <%= @round.deck.category %>. You answered <%= first_try %> / <%= @total_questions %> cards correctly on the first try. You submitted <%= @total_guesses %> guesses before each card was answered correctly.</p>
